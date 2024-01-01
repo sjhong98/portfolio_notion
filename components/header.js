@@ -1,5 +1,6 @@
 import { F4, Header } from "@/styles/styled-components";
 import LightModeIcon from '@mui/icons-material/LightMode';
+import ModeNightIcon from '@mui/icons-material/ModeNight';
 import { useState } from "react";
 
 export default function HeaderComponent(props) {
@@ -21,7 +22,11 @@ export default function HeaderComponent(props) {
     return (
         <Header>
             <F4>홍승재의 이력서 | 포트폴리오</F4>
-            <LightModeIcon className="text-black mr-6 cursor-pointer" onClick={handleClick} />
+            { isDay ?
+                <ModeNightIcon className="text-black mr-6 cursor-pointer" onClick={handleClick} />
+                :
+                <LightModeIcon className="text-white mr-6 cursor-pointer" onClick={handleClick}  />
+            }
         </Header>
     )
 }

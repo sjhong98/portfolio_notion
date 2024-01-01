@@ -13,7 +13,7 @@ export const Header = styled.div`
     padding-right: 1vw;
 `
 
-const Font = styled.p`
+const Font = styled.pre`
     font-family: 'pret-el';
     margin-bottom: 1vh;
 `
@@ -31,12 +31,13 @@ export const Button = styled.div`
 `
 
 export const F1 = styled(Font)`
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: 'pret-l';
 `
 
 export const F2 = styled(Font)`
     font-size: 2rem;
+    font-family: 'pret-l';
 `
 
 export const F3 = styled(Font)`
@@ -45,6 +46,11 @@ export const F3 = styled(Font)`
 
 export const F4 = styled(Font)`
     font-size: 1rem;
+`
+
+export const F5 = styled(Font)`
+    font-size: 1rem;
+    color: #999;
 `
 
 export const Container = styled.div`
@@ -68,3 +74,13 @@ export const Content = styled.div`
     margin-top: 10vh;
 `
 
+export const Space = styled.div`
+    width: 100%;
+    height: 15vh;
+`
+
+export const ProjectContainer = styled.div`
+    &:hover {
+        scale: 1.01;
+    }
+`
