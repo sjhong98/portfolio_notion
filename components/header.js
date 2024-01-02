@@ -20,7 +20,7 @@ export default function HeaderComponent(props) {
     }
 
     return (
-        <Header>
+        <Header color={isDay ? 'white' : 'black'}>
             <F4>홍승재의 이력서 | 포트폴리오</F4>
             { isDay ?
                 <ModeNightIcon className="text-black mr-6 cursor-pointer" onClick={handleClick} />

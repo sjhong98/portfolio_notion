@@ -1,15 +1,24 @@
 import propic from '../public/propic2.jpg';
-import { F1, F2, F3, F4, Container, Content, Button, Space } from '@/styles/styled-components';
+import { F1, F2, F3, F4, Container, Content, Space } from '@/styles/styled-components';
 import HeaderComponent from '@/components/header';
 import Image from 'next/image';
 import Intro from '@/components/intro';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { projectList } from '@/components/projectList';
 import Project from '@/components/projects';
+import Pop from '@/components/Pop';
+import SelfIntro from '@/components/self-intro';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 export default function Home() {
+  const toggleRef2 = useRef(null);
+  const toggleRef1 = useRef(null);
   const [fontColor, setFontColor] = useState("black");
   const [bgColor, setBgColor] = useState("white");
+  const [poped, setPoped] = useState(false);
+  const [popItem, setPopItem] = useState({});
+  const [toggle2Open, setToggle2Open] = useState(false);
+  const [toggle1Open, setToggle1Open] = useState(false);
   const projects = projectList;
 
   const changeFontColor = (props) => {
@@ -20,14 +29,52 @@ export default function Home() {
     setBgColor(props);
   }
 
+  const changePoped = (props) => {
+    setPoped(props);
+    console.log("change pop : " , props);
+  }
+
+  const changeIndex = (index) => {
+    setPopItem(projects[index]);
+  }
+
+  const handleToggle2Click = () => {
+    setToggle2Open((prev) => !prev);
+  }
+
+  const handleToggle1Click = () => {
+    setToggle1Open((prev) => !prev);
+  }
+
+  useEffect(() => {
+    if(toggle2Open) {
+      toggleRef2.current.classList.add('toggleOpened');
+      toggleRef2.current.classList.remove('toggleClosed');
+    } else {
+      toggleRef2.current.classList.add('toggleClosed');
+      toggleRef2.current.classList.remove('toggleOpened');
+    }
+  }, [toggle2Open])
+
+  useEffect(() => {
+    if(toggle1Open) {
+      toggleRef1.current.classList.add('toggleOpened');
+      toggleRef1.current.classList.remove('toggleClosed');
+    } else {
+      toggleRef1.current.classList.add('toggleClosed');
+      toggleRef1.current.classList.remove('toggleOpened');
+    }
+  }, [toggle1Open])
+
+
   return (
-    <Container fontColor={fontColor} bgColor={bgColor}>
+    <Container fontColor={fontColor} bgColor={bgColor} >
       <HeaderComponent changeFontColor={changeFontColor} changeBgColor={changeBgColor} />
-      <Content>
+      <Content poped={poped}>
         <F1>홍승재의 이력서 | 포트폴리오</F1>
         <div className='flex flex-row mt-12'>
-          <Image src={propic} className='w-1/4'/>
-          <Intro fontColor={fontColor} />
+          <Image src={propic} className='w-1/4 h-1/4'/>
+          <Intro fontColor={fontColor} x/>
         </div>
         <Space />
         <div>
@@ -39,19 +86,40 @@ export default function Home() {
         </div>
         <Space />
         <div>
-          <F2>Portfolio</F2>
-          <div className='grid grid-cols-2 gap-6'>
-          {  projects.map((item, index) => {
-            return (
-              <Project key={index} item={item} />
-            )  
-          })}
+          <div className='flex flex-row items-center cursor-pointer'>
+            <PlayArrowIcon className='mb-2 mr-2' onClick={handleToggle1Click} ref={toggleRef1} />
+            <F2>Portfolio</F2>
           </div>
-
-          
+          {
+            toggle1Open ?
+            <div className='grid grid-cols-2 gap-6'>
+              {  projects.map((item, index) => {
+                return (
+                  <div key={index} onClick={() => {changeIndex(index)}}>
+                    <Project key={index} item={item} changePoped={changePoped} />
+                  </div>
+                )  
+              })}
+              </div>
+                    
+            :
+            <></>
+          }
         </div>
+          
+        <Space />
+        <div className='flex flex-row items-center cursor-pointer'>
+          <PlayArrowIcon className='mb-2 mr-2' onClick={handleToggle2Click} ref={toggleRef2} />
+          <F2>자기소개</F2>
+        </div>
+        { toggle2Open ?
+          <SelfIntro />
+          :
+          <></>
+        }
         <Space />
       </Content>
+      <Pop item={popItem} poped={poped} bgColor={bgColor} changePoped={changePoped} />
     </Container>
   )
 }

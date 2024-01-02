@@ -34,8 +34,41 @@ body {
 }
 
 @font-face {
+  font-family: 'pret-r';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'pret-l';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
   font-weight: 100;
   font-style: normal;
+}
+
+@keyframes toggleOpenAnim {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes toggleCloseAnim {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.toggleOpened {
+  animation: toggleOpenAnim 0.3s forwards;
+}
+
+.toggleClosed {
+  animation: toggleCloseAnim 0.3s forwards;
 }
