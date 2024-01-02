@@ -11,12 +11,14 @@ import SelfIntro from '@/components/self-intro';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 export default function Home() {
+  const toggleRef3 = useRef(null);
   const toggleRef2 = useRef(null);
   const toggleRef1 = useRef(null);
   const [fontColor, setFontColor] = useState("black");
   const [bgColor, setBgColor] = useState("white");
   const [poped, setPoped] = useState(false);
   const [popItem, setPopItem] = useState({});
+  const [toggle3Open, setToggle3Open] = useState(false);
   const [toggle2Open, setToggle2Open] = useState(false);
   const [toggle1Open, setToggle1Open] = useState(false);
   const projects = projectList;
@@ -36,6 +38,10 @@ export default function Home() {
 
   const changeIndex = (index) => {
     setPopItem(projects[index]);
+  }
+
+  const handleToggle3Click = () => {
+    setToggle3Open((prev) => !prev);
   }
 
   const handleToggle2Click = () => {
@@ -66,6 +72,16 @@ export default function Home() {
     }
   }, [toggle1Open])
 
+  useEffect(() => {
+    if(toggle3Open) {
+      toggleRef3.current.classList.add('toggleOpened');
+      toggleRef3.current.classList.remove('toggleClosed');
+    } else {
+      toggleRef3.current.classList.add('toggleClosed');
+      toggleRef3.current.classList.remove('toggleOpened');
+    }
+  }, [toggle3Open])
+
 
   return (
     <Container fontColor={fontColor} bgColor={bgColor} >
@@ -86,8 +102,8 @@ export default function Home() {
         </div>
         <Space />
         <div>
-          <div className='flex flex-row items-center cursor-pointer'>
-            <PlayArrowIcon className='mb-2 mr-2' onClick={handleToggle1Click} ref={toggleRef1} />
+          <div className='flex flex-row items-center cursor-pointer' onClick={handleToggle1Click} >
+            <PlayArrowIcon className='mb-2 mr-2' ref={toggleRef1} />
             <F2>Portfolio</F2>
           </div>
           {
@@ -106,17 +122,23 @@ export default function Home() {
             <></>
           }
         </div>
-          
         <Space />
-        <div className='flex flex-row items-center cursor-pointer'>
-          <PlayArrowIcon className='mb-2 mr-2' onClick={handleToggle2Click} ref={toggleRef2} />
+          <div className='flex flex-row items-center cursor-pointer' onClick={handleToggle3Click} >
+            <PlayArrowIcon className='mb-2 mr-2' ref={toggleRef3} />
+            <F2>Stacks</F2>
+          </div>
+        <Space />
+        <div className='flex flex-row items-center cursor-pointer' onClick={handleToggle2Click} >
+          <PlayArrowIcon className='mb-2 mr-2'ref={toggleRef2} />
           <F2>자기소개</F2>
         </div>
         { toggle2Open ?
-          <SelfIntro />
+          <SelfIntro bgColor={bgColor} />
           :
           <></>
         }
+        <Space />
+        <Space />
         <Space />
       </Content>
       <Pop item={popItem} poped={poped} bgColor={bgColor} changePoped={changePoped} />

@@ -45,6 +45,7 @@ export const F1 = styled(Font)`
 export const F2 = styled(Font)`
     font-size: 2.5rem;
     font-family: 'pret-l';
+    margin-bottom: 2vh;
 `
 
 export const F2_2 = styled(Font)`
@@ -53,16 +54,19 @@ export const F2_2 = styled(Font)`
 
 export const F3 = styled(Font)`
     font-size: 1.3rem;
+    white-space: pre-wrap;
 `
 
 export const F3_2 = styled(Font)`
     font-size: 1.3rem;
     font-family: 'pret-l';
+    margin-bottom: 0.5vh;
 `
 
 export const F4 = styled(Font)`
     font-size: 1rem;
-    white-space: pre-wrap
+    white-space: pre-wrap;
+    line-height: 2.7vh;
 `
 
 export const F5 = styled(Font)`
@@ -100,7 +104,7 @@ export const Content = styled.div`
 
 export const Space = styled.div`
     width: 100%;
-    height: 15vh;
+    height: 7.5vh;
 `
 
 export const ProjectContainer = styled.div`
