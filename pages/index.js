@@ -1,14 +1,15 @@
 import propic from '../public/propic2.jpg';
-import { F1, F2, F3, F4, Container, Content, Space } from '@/styles/styled-components';
+import { F1, F2, F3, F4, Container, Content, Space, F3_2 } from '@/styles/styled-components';
 import HeaderComponent from '@/components/header';
 import Image from 'next/image';
 import Intro from '@/components/intro';
 import { useEffect, useRef, useState } from 'react';
-import { projectList } from '@/components/projectList';
+import { projectList, interesting, green, yellow } from '@/components/projectList';
 import Project from '@/components/projects';
 import Pop from '@/components/Pop';
 import SelfIntro from '@/components/self-intro';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import Chip from '@/components/chip';
 
 export default function Home() {
   const toggleRef3 = useRef(null);
@@ -127,6 +128,33 @@ export default function Home() {
             <PlayArrowIcon className='mb-2 mr-2' ref={toggleRef3} />
             <F2>Stacks</F2>
           </div>
+          { toggle3Open ?
+            <div className='flex flex-row'>
+              <div className='w-1/2 flex flex-col items-center'>
+                <F4>여러 번 사용해보았고, 익숙하게 사용할 수 있습니다.</F4>
+                { green.map((item, index) => {
+                  return (
+                    <Chip key={index} title={item} />
+                  )
+                })}
+              </div>
+              <div className='w-1/2 flex flex-col items-center'>
+                <F4>직접 사용해보았으나, 능숙하진 않습니다.</F4>
+                { yellow.map((item, index) => {
+                  return (
+                    <Chip key={index} title={item} />
+                  )
+                })
+
+                }
+              </div>
+            </div>
+            :
+              <></>
+          } 
+          
+
+          
         <Space />
         <div className='flex flex-row items-center cursor-pointer' onClick={handleToggle2Click} >
           <PlayArrowIcon className='mb-2 mr-2'ref={toggleRef2} />

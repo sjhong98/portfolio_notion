@@ -14,7 +14,10 @@ export const projectList = [
         '업로드되는 이미지의 비율이 각기 다르기 때문에 포스트의 이미지가 제대로 표시되지 않는 문제 발생. 이에 이미지의 naturalWidth / naturalHeight 속성 사용하여 비교 연산자를 통해 가로 / 세로 / 정방형 이미지로 구분하였고, 비율에 따라 이미지 크기와 여백을 조정함으로써 완성도 높은 postView 페이지 구현.',
         '지도상에서 마우스오버 이벤트 발생시, 해당 지역 폴리곤의 색상이 바뀌도록 구현하였는데, 마우스오버 이벤트 발생 시 버벅임 발생. 마우스오버 이벤트 시 발생하는 axios 요청, 히트맵을 위한 if문 등 여러 가지 원인을 제거하고 테스트해보았으나, 문제가 해결되지 않음. 결국 카카오맵 API 자체의 문제로 결론짓고, 마우스오버 이벤트시 폴리곤 색상 변경 효과를 제거하는 대신 오버된 지역명을 표시함으로서 해결.'
       ],
-      image: 2
+      image: 2,
+      notion: 'https://climbing-streetcar-f9a.notion.site/685128dc31e94839873d13e93520079e?v=93540477e8e743e8b87cd9da816e3ef0&pvs=4',
+      github: 'https://github.com/daedongyourjido',
+      url: "",
     },
     {
         title: "넌P해 난J할게",
@@ -32,7 +35,10 @@ export const projectList = [
             '카드가 없는 column은 드래그앤드롭 불가 영역이 되어, 카드 추가가 안되는 문제가 발생. 이에 초기에 ‘day 1’과 같이 상단의 설명 문구가 적힌 카드를 미리 추가함으로써 모든 column을 드래그앤드롭 가능 영역으로 구현.',
             '화면을 viewport에 맞추고 overflow를 막아 화면 밖 요소에 접근하지 못하게 한 후, 화면 밖의 요소를 움직여 화면 전환이 일어나는 듯한 효과 구현'
         ],
-        image: 2
+        image: 2,
+        github: 'https://github.com/sjhong98/uPmJ',
+        url: 'https://partyone-a5fab.web.app/',
+        notion: 'https://noble-walker-465.notion.site/UMPJ-53854993d4a84510b6fbd00dba60dbc3?pvs=4',
       },
       {
         title: "DMRS",
@@ -50,6 +56,9 @@ export const projectList = [
             '초기에 client의 web/app 및 server까지 전부 통일된 repository를 사용하다가 계속해서 버전 충돌, 원인 모를 풀 에러 등이 발생하여, 이를 해결하거나 새로운 repository를 만드는데에 불필요한 시간이 소모되었음. 이에 repository를 web/app/server 별로 분할하여 각자의 영역만 관리함으로써 불필요한 시간 소모를 방지할 수 있었음.'
         ],
         image: 2,
+        notion: 'https://noble-walker-465.notion.site/DMRS-5933966e79ef4b88a899260b1de5a8bf?pvs=4',
+        url: 'https://dmrs-b910d.web.app/',
+        github: 'https://github.com/sjhong98/DMRS'
       },
       {
         title: "SCRAPPER",
@@ -67,7 +76,10 @@ export const projectList = [
             '텍스트를 드래그하여 좋아요를 표시할 수 있도록 구현하고자 함. 이에 selection web API를 활용하여 드래그된 문자열의 인덱스 정보를 추출하고, 해당 구간의 인덱스들을 DB에 누적하여 저장하도록 함. 그리고 각 문자열을 span 태그로 분리하여, 배경 색상을 다르게 적용함으로써 선택된 문자에 하이라이트를 표시함. 또한 좋아요 수가 많을 수록 짙은 색상을 적용함으로써, 좋아요 수를 파악할 수 있도로 함.', 
             '문자열의 모든 문자를 span 태그로 분리했더니, 드래그된 문자열 내용만 반환되고 인덱스 정보가 추출되지 않는 문제가 발생했음. 이에 indexOf() 메소드를 통해 해당 문자열의 위치를 파악하고, 문자열의 length를 통해 인덱스 구간을 파악하였음.'
         ],
-        image: 2
+        image: 2,
+        url: 'https://scrapper-zeta.vercel.app/',
+        github: 'https://github.com/sjhong98/scrapper',
+        notion: ""
       },
       {
         title: "Portfolio",
@@ -84,6 +96,9 @@ export const projectList = [
           '포트폴리오 페이지인만큼, 디자인이 심플하고 전달하고자 하는 내용이 정확히 전달되어야 했음. 이에 여러 레퍼런스들을 참고하여 최소한의 동작으로 페이지 간 이동이 가능하며, 에니메이션을 통해 자연스럽게 이동할 수 있고, 최대한 많은 요소에 마우스오버 및 클릭 이벤트를 적용함으로써 사용자 경험을 고려한 페이지를 구현함.'
         ],
         image: 1,
+        url: 'https://hongseungjae.info/', 
+        github: 'https://github.com/sjhong98/Portfolio_final',
+        notion: ""
       },
       {
         title: "Muse",
@@ -101,7 +116,39 @@ export const projectList = [
             '전시물 카테고리의 변경을 구현하기 위해 index 값이 바뀔 경우, 새로운 데이터를 받아오도록 구현하였으나, index 값이 변하였음에도 초기 index값의 데이터만 받아오는 문제 발생. 이벤트 핸들러에 콜백 함수를 등록하여, 이벤트 핸들러 동작시에 콜백 함수가 실행되도록 하였는데, 이벤트 핸들러가 동작할 시점에 콜백 함수는 이미 소멸한 상태로, 외부 변수인 index의 클로저만 남아있는 상태가 되었던 것임. 이에 index 값이 변할 경우에 콜백 함수를 새로 생성하고 이벤트 핸들러에 재등록하여, 제대로 index가 반영될 수 있도록 함.', 
             'typescript에서 컴포넌트 간 전달되는 데이터의 type이 복잡해짐에 따라 데이터 타입의 interface를 구현하고, 이를 이용하여 props를 전달.'
         ],
-        image: 1
+        image: 1,
+        url: 'https://muse-xi.vercel.app/',
+        github: 'https://github.com/sjhong98/muse',
+        notion: ""
+      },
+      {
+        title: "Portfolio-Notion.ver",
+        subtitle: "Notion 버전 포트폴리오 웹페이지",
+        main: "#Next.js  #JS  #Styled-Components  #Tailwind",
+        duration: "2024.1",
+        part: "1인 프로젝트",
+        func : ["포트폴리오 내용 표시"],
+        stack: ["Next.js", "React", "Javascript", "Styled-Components", "Tailwind", "Vercel"],
+        dev: ["Next.js SPA", "Toggle을 통한 내용 숨김" , "Side Popup을 통한 내용 표시"],
+        cap: "Muse는 메트로폴리탄 박물관 Open API를 사용하여 박물관 전시물들을 확인할 수 있는 웹입니다. ",
+        troubles: [""],
+        solutions: [""],
+        image: 2,
+        url: 'https://muse-xi.vercel.app/',
+        github: 'https://github.com/sjhong98/Portfolio_notion',
+        notion: ""
       },
 
-  ]
+  ];
+
+export const interesting = [
+  'SSR', 'UI/UX', '에니메이션', 'MapAPI'
+];
+
+export const green = [
+  'HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Next.js', 'Tailwind', 'Styled-Component', 'Vercel', 'Firebase', 'Github', 'Notion'
+];
+
+export const yellow = [
+  'Typescript', 'Webpack', 'Socket.io', 'Cypress', 'Github Actions', 'Route 53', 'React Native'
+];

@@ -47,6 +47,27 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'typo';
+  src: url('../assets/fonts/typo.otf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bn';
+  src: url('../assets/fonts/bn.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ss';
+  src: url('../assets/fonts/ss.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
 @keyframes toggleOpenAnim {
   0% {
     transform: rotate(0);

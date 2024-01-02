@@ -1,6 +1,10 @@
 import { PopDown, PopUp, F1, F2, F3, F4, F2_2, F0, F5, F5_2, Space, F3_2 } from "@/styles/styled-components";
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import Image from 'next/image';
+import notionImg from '../public/Notion.png';
+import githubImg from '../public/Github.png';
+import urlImg from '../public/url.png';
+import { useRouter } from "next/router";
 
 export default function Pop(props) {
     const poped = props.poped;
@@ -32,6 +36,7 @@ export default function Pop(props) {
 
 function PopComponent(props) {
     const item = props.item;
+    const router = useRouter();
 
     return (
         <div>
@@ -86,6 +91,27 @@ function PopComponent(props) {
                         )
                     })}
                 </div>
+                <div className="mt-16">
+                    <F3_2>Links</F3_2>
+                    <div className="flex flex-row mt-8">
+                    { item.notion !== "" ?
+                        <Image src={notionImg} className="w-[4vw] cursor-pointer" onClick={()=>{router.push(`${item.notion}`)}} />
+                        :
+                        <></>
+                    }
+                    { item.github !== "" ?
+                        <Image src={githubImg} className="w-[4vw] ml-8 cursor-pointer" onClick={()=>{router.push(`${item.github}`)}} />
+                        :
+                        <></>
+                    }
+                    { item.url !== "" ?
+                        <Image src={urlImg} className="w-[4vw] ml-8 cursor-pointer" onClick={()=>{router.push(`${item.url}`)}} />
+                        :
+                        <></>
+                    }
+                    </div>
+                </div>
+                <div className="w-full h-[20vh]" />
             </div>
         </div>
     )
