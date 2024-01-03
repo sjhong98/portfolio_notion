@@ -115,21 +115,25 @@ body {
   0% {
     padding-left: 10vw;
     padding-right: 10vw;
+    margin-left: 0vw;
   }
   100% {
-    padding-right: 40vw;
+    padding-right: 30vw;
     padding-left: 0vw;
+    margin-left: -12vw;
   }
 }
 
 @keyframes testRev {
   0% {
     padding-left: 0vw;
-    padding-right: 40vw;
+    padding-right: 30vw;
+    margin-left: -12vw;
   }
   100% {
     padding-right: 10vw;
     padding-left: 10vw;
+    margin-left: 0vw;
   }
 }
 
