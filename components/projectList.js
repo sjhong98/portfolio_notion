@@ -7,7 +7,7 @@ export const projectList = [
       part: "팀 프로젝트, 프론트엔드 개발 90% 담당",
       func: ["사진 기반 포스트 CRUD", "회원정보 CRUD", "좋아요, 댓글, 알림 등 상호작용", "카카오맵 API 활용한 지도 구현", "히트맵으로 지역별 게시물 수 표현"],
       stack: ["HTML", "CSS", "Javascript", "React", "Redux", "Webpack", "Cypress", "Github Actions"],
-      dev: ["React SPA", "figma 디자인 반영" "카카오맵 API 및 행정구역 폴리곤 적용", "로딩 중 스켈레톤 UI", "axios 모듈 이용한 서버와의 API 통신", "props를 이용한 버튼 컴포넌트 재사용", "MUI를 활용한 컴포넌트 구현", "Webpack 번들링 및 alias 지정", "Cypress 테스트 자동화", "Github Actions CI/CD 활용한 자동배포"],
+      dev: ["React SPA", "figma 디자인 반영", "카카오맵 API 및 행정구역 폴리곤 적용", "로딩 중 스켈레톤 UI", "axios 모듈 이용한 서버와의 API 통신", "props를 이용한 버튼 컴포넌트 재사용", "MUI를 활용한 컴포넌트 구현", "Webpack 번들링 및 alias 지정", "Cypress 테스트 자동화", "Github Actions CI/CD 활용한 자동배포"],
       troubles:['코드 및 디렉토리 리팩토링', '가로/세로/정방형 이미지 구분', '카카오맵 API 마우스오버 이벤트 부하 발생'],
       solutions: [
         '초반에 구현 자체에만 초점을 두고 코드를 작성한 결과, 코드, 변수명, 디렉토리 구성 등이 협업하기 어렵다는 문제 발생. 이에 협업을 위하여 대대적인 리팩토링을 실행하였음. 인라인 CSS 코드를 별도의 CSS 파일로 분리하였고, 직관적인 변수명을 사용하였으며, next.js 및 quasar 디렉토리 구조 참고하여 view/style/component 등으로 디렉토리 리팩토링 실행하였음. 추가적으로 공통적으로 사용되는 MUI 컴포넌트들은 props를 이용하여 재사용성 높임.',
