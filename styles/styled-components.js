@@ -189,8 +189,8 @@ export const Content = styled.div`
         padding-left: 10vw;
         padding-right: 10vw;
         margin-top: 10vh;
-        margin-left: ${({ poped }) => (poped ? '0vw' : '20vw')};
-        margin-right: ${({ poped }) => (poped ? '40vw' : '20vw')};
+        /* margin-left: ${({ poped }) => (poped ? '0vw' : '20vw')};
+        margin-right: ${({ poped }) => (poped ? '40vw' : '20vw')}; */
         z-index: 2;
     }
 

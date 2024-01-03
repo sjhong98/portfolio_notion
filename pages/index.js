@@ -23,6 +23,7 @@ export default function Home() {
   const [toggle2Open, setToggle2Open] = useState(false);
   const [toggle1Open, setToggle1Open] = useState(false);
   const projects = projectList;
+  const contentRef = useRef(null);
 
   const changeFontColor = (props) => {
     setFontColor(props);
@@ -83,11 +84,21 @@ export default function Home() {
     }
   }, [toggle3Open])
 
+  useEffect(() => {
+    if(poped) {
+      contentRef.current.classList.add('testAnim');
+      contentRef.current.classList.remove('testAnimRev');
+    } else {
+      contentRef.current.classList.remove('testAnim');
+      contentRef.current.classList.add('testAnimRev');
+    }
+  }, [poped])
+
 
   return (
     <Container fontColor={fontColor} bgColor={bgColor} >
       <HeaderComponent changeFontColor={changeFontColor} changeBgColor={changeBgColor} />
-      <Content poped={poped}>
+      <Content ref={contentRef} poped={poped}>
         <F1>홍승재의 이력서 | 포트폴리오</F1>
         <div className='flex flex-row mt-12'>
           <Image src={propic} className='sm:w-1/4 w-1/3 h-1/4 sm:mr-0 mr-3 sm:mt-0 mt-2'/>

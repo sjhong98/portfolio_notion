@@ -93,3 +93,50 @@ body {
 .toggleClosed {
   animation: toggleCloseAnim 0.3s forwards;
 }
+
+@keyframes routingAnim {
+  0% {
+    transform: scale(0);
+  }
+  1%{
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1000);
+    opacity: 1;
+  }
+}
+
+.routing {
+  animation: routingAnim 1s ease forwards;
+}
+
+@keyframes test {
+  0% {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  100% {
+    padding-right: 40vw;
+    padding-left: 0vw;
+  }
+}
+
+@keyframes testRev {
+  0% {
+    padding-left: 0vw;
+    padding-right: 40vw;
+  }
+  100% {
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+}
+
+.testAnim {
+  animation: test 0.3s forwards;
+}
+
+.testAnimRev {
+  animation: testRev 0.3s forwards;
+}
