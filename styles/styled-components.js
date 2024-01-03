@@ -126,11 +126,11 @@ export const F4 = styled(Font)`
 
 export const F4_2 = styled(Font)`
     @media (max-width: 800px) {
-        font-size: 1rem;
+        font-size: 0.6rem;
         line-height: 2.7vh;
     }
     @media (min-width: 801px) {
-        font-size: 0.6rem;
+        font-size: 1rem;
         white-space: pre-wrap;
         line-height: 2.7vh;
     }
