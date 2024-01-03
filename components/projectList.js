@@ -18,6 +18,7 @@ export const projectList = [
       notion: 'https://climbing-streetcar-f9a.notion.site/685128dc31e94839873d13e93520079e?v=93540477e8e743e8b87cd9da816e3ef0&pvs=4',
       github: 'https://github.com/daedongyourjido',
       url: "",
+      etc: "졸업 프로젝트 심사 이후 배포를 중단하였습니다. 구체적인 기능 시현은 github readme를 통해 확인하실 수 있습니다. "
     },
     {
         title: "넌P해 난J할게",
@@ -39,6 +40,7 @@ export const projectList = [
         github: 'https://github.com/sjhong98/uPmJ',
         url: 'https://partyone-a5fab.web.app/',
         notion: 'https://noble-walker-465.notion.site/UMPJ-53854993d4a84510b6fbd00dba60dbc3?pvs=4',
+        etc: "구체적인 기능 시현은 github readme를 통해 확인하실 수 있습니다."
       },
       {
         title: "DMRS",
@@ -58,7 +60,8 @@ export const projectList = [
         image: 2,
         notion: 'https://noble-walker-465.notion.site/DMRS-5933966e79ef4b88a899260b1de5a8bf?pvs=4',
         url: 'https://dmrs-b910d.web.app/',
-        github: 'https://github.com/sjhong98/DMRS'
+        github: 'https://github.com/sjhong98/DMRS',
+        etc: "구체적인 기능 시현은 github readme를 통해 확인하실 수 있습니다."
       },
       {
         title: "SCRAPPER",
@@ -79,7 +82,8 @@ export const projectList = [
         image: 2,
         url: 'https://scrapper-zeta.vercel.app/',
         github: 'https://github.com/sjhong98/scrapper',
-        notion: ""
+        notion: "",
+        etc: "구체적인 기능 시현은 github readme를 통해 확인하실 수 있습니다."
       },
       {
         title: "Portfolio",
@@ -98,7 +102,8 @@ export const projectList = [
         image: 1,
         url: 'https://hongseungjae.info/', 
         github: 'https://github.com/sjhong98/Portfolio_final',
-        notion: ""
+        notion: "",
+        etc: ""
       },
       {
         title: "Muse",
@@ -119,7 +124,8 @@ export const projectList = [
         image: 1,
         url: 'https://muse-xi.vercel.app/',
         github: 'https://github.com/sjhong98/muse',
-        notion: ""
+        notion: "",
+        etc: ""
       },
       {
         title: "Portfolio-Notion.ver",
@@ -139,7 +145,8 @@ export const projectList = [
         image: 2,
         url: 'https://muse-xi.vercel.app/',
         github: 'https://github.com/sjhong98/Portfolio_notion',
-        notion: ""
+        notion: "",
+        etc: ""
       },
 
   ];

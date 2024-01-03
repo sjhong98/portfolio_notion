@@ -1,4 +1,4 @@
-import { PopDown, PopUp, F1, F3, F4, F2_2, F5_2, F3_2, F4_2 } from "@/styles/styled-components";
+import { PopDown, PopUp, F1, F3, F4, F2_2, F5_2, F3_2, F4_2, F5, F6 } from "@/styles/styled-components";
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import Image from 'next/image';
 import notionImg from '../public/Notion.png';
@@ -112,6 +112,13 @@ function PopComponent(props) {
                     }
                     </div>
                 </div>
+                { item.etc!=="" ?
+                <F6 className="mt-20">※ {item.etc}</F6>
+                :
+                <></>
+
+                }
+                
                 <div className="w-full h-[20vh]" />
             </div>
         </div>

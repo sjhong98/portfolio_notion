@@ -148,6 +148,11 @@ export const F5_2 = styled(Font)`
     white-space: pre-wrap;
 `
 
+export const F6 = styled(Font)`
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+`
+
 export const Container = styled.div`
     @media (max-width: 800px) {
         min-height: 100vh;
