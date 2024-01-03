@@ -6,6 +6,7 @@ import portfolio from '../public/port.png';
 import Image from 'next/image';
 import { useRouter } from "next/router";
 import { useRef } from "react";
+import insta from '../public/insta.png';
 
 export default function Links(props) {
     const router = useRouter();
@@ -34,6 +35,9 @@ export default function Links(props) {
             </Button>
             <Button className='rounded-xl sm:ml-6 ml-2' style={{transform:'rotate(-23deg)'}} onClick={handleLinkClick}>
                 <Image src={portfolio} />
+            </Button>
+            <Button className='rounded-xl sm:ml-6 ml-2' onClick={() => router?.push('https://www.instagram.com/hong_seung_jae_/')}>
+                <Image src={insta} />
             </Button>
             <div ref={linkRef} className="rounded-full w-1 h-1 opacity-0" style={{backgroundColor:'#FEE832', zIndex:9999}} />
         </div>
