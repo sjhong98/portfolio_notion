@@ -10,8 +10,10 @@ import Pop from '@/components/Pop';
 import SelfIntro from '@/components/self-intro';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Chip from '@/components/chip';
+import QnA from '@/components/qna';
 
 export default function Home() {
+  const toggleRef4 = useRef(null);
   const toggleRef3 = useRef(null);
   const toggleRef2 = useRef(null);
   const toggleRef1 = useRef(null);
@@ -19,6 +21,7 @@ export default function Home() {
   const [bgColor, setBgColor] = useState("white");
   const [poped, setPoped] = useState(false);
   const [popItem, setPopItem] = useState({});
+  const [toggle4Open, setToggle4Open] = useState(false);
   const [toggle3Open, setToggle3Open] = useState(false);
   const [toggle2Open, setToggle2Open] = useState(false);
   const [toggle1Open, setToggle1Open] = useState(false);
@@ -40,6 +43,10 @@ export default function Home() {
 
   const changeIndex = (index) => {
     setPopItem(projects[index]);
+  }
+
+  const handleToggle4Click = () => {
+    setToggle4Open((prev) => !prev);
   }
 
   const handleToggle3Click = () => {
@@ -83,6 +90,16 @@ export default function Home() {
       toggleRef3.current.classList.remove('toggleOpened');
     }
   }, [toggle3Open])
+
+  useEffect(() => {
+    if(toggle4Open) {
+      toggleRef4.current.classList.add('toggleOpened');
+      toggleRef4.current.classList.remove('toggleClosed');
+    } else {
+      toggleRef4.current.classList.add('toggleClosed');
+      toggleRef4.current.classList.remove('toggleOpened');
+    }
+  }, [toggle4Open])
 
   useEffect(() => {
     if(poped) {
@@ -177,6 +194,19 @@ export default function Home() {
           :
           <></>
         }
+        <Space />
+        <div className='flex flex-row items-center cursor-pointer' onClick={handleToggle4Click} >
+          <PlayArrowIcon className='mb-2 mr-2'ref={toggleRef4} />
+          <F2>etc.</F2>
+        </div>
+        { toggle4Open ?
+          <QnA />
+          :
+          <></>
+
+        }
+        <Space />
+        <Space />
         <Space />
         <Space />
         <Space />

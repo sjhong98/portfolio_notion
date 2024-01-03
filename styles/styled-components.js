@@ -31,7 +31,7 @@ export const Header = styled.div`
     }
 `
 
-const Font = styled.pre`
+export const Font = styled.pre`
     font-family: 'pret-el';
     margin-bottom: 1vh;
 `
