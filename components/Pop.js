@@ -70,13 +70,13 @@ function PopComponent(props) {
                         <F3_2 className="mt-12">주요 구현내용</F3_2>
                         { item.dev!==undefined && item.dev.map((item, index) => {
                             return (
-                                <div className="-mb-2"><F4_2>·  {item}</F4_2> </div>
+                                <div key={index} className="-mb-2"><F4_2>·  {item}</F4_2> </div>
                             )
                         })}
                         <F3_2 className="mt-12">주요 기능</F3_2>
                         { item.func!==undefined && item.func.map((item, index) => {
                             return (
-                                <div className="-mb-2"> <F4_2>·  {item}</F4_2> </div>
+                                <div key={index} className="-mb-2"> <F4_2>·  {item}</F4_2> </div>
                             )
                         })}
                     </div>
@@ -85,7 +85,7 @@ function PopComponent(props) {
                     <F3_2>문제 해결</F3_2>
                     { item.troubles!==undefined && item.troubles.map((_item, index) => {
                         return (
-                            <div className="mt-8">
+                            <div key={index} className="mt-8">
                                 <F3>{index+1} - <span className="pl-1 pr-1 bg-red-100">{_item}</span></F3>
                                 <F4>{item.solutions[index]}</F4>
                             </div>
