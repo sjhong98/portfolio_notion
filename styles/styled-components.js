@@ -256,7 +256,7 @@ const Pop = styled.div`
     @media (max-width:800px) {
         width: 100vw;
     }
-    @media (min-width:800px) {
+    @media (min-width:801px) {
         width: 40vw;
     }
     height: 100vh;
@@ -273,7 +273,7 @@ export const PopUp = styled(Pop)`
         animation: ${popedDownAnim} 0.3s ease forwards;
         right: -40vw;
     }
-    @media (max-width: 800px) {
+    @media (min-width: 801px) {
         animation: ${popedDownAnimM} 0.3s ease forwards;
         right: -40vw;
     }
@@ -285,7 +285,7 @@ export const PopDown = styled(Pop)`
         animation: ${popedUpAnim} 0.3s ease forwards;
         right: 0vw;
     }
-    @media (max-width: 800px) {
+    @media (min-width: 801px) {
         animation: ${popedUpAnimM} 0.3s ease forwards;
         right: 0vw;
     }
