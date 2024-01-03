@@ -149,9 +149,9 @@ export const interesting = [
 ];
 
 export const green = [
-  'HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Next.js', 'Tailwind', 'Styled-Component', 'Vercel', 'Firebase', 'Github', 'Notion'
+  'HTML', 'CSS', 'Javascript', 'Typescript', 'React', 'Redux', 'Next.js', 'Tailwind', 'Styled-Component', 'Vercel', 'Firebase', 'Github', 'Notion'
 ];
 
 export const yellow = [
-  'Typescript', 'Webpack', 'Socket.io', 'Cypress', 'Github Actions', 'Route 53', 'React Native'
+  'Webpack', 'Socket.io', 'Cypress', 'Github Actions', 'Route 53', 'React Native'
 ];
