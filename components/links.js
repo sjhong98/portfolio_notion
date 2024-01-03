@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 export default function Links(props) {
     const router = useRouter();
     return (
-        <div className='flex flex-row mt-6'>
+        <div className='flex flex-row sm:mt-6 mt-3'>
             <Button className='rounded-xl' onClick={() => router.push('https://github.com/sjhong98')}>
                 { props.fontColor === "black" ?
                     <Image src={github} /> 
@@ -18,10 +18,10 @@ export default function Links(props) {
                 }
                 
             </Button>
-            <Button className='rounded-xl ml-6' onClick={() => router?.push('https://blog.naver.com/elyon98')}>
+            <Button className='rounded-xl sm:ml-6 ml-2' onClick={() => router?.push('https://blog.naver.com/elyon98')}>
                 <Image src={naverBlog} />
             </Button>
-            <Button className='rounded-xl ml-6' style={{transform:'rotate(-23deg)'}} onClick={() => router.push('https://hongseungjae.info/')}>
+            <Button className='rounded-xl sm:ml-6 ml-2' style={{transform:'rotate(-23deg)'}} onClick={() => router.push('https://hongseungjae.info/')}>
                 <Image src={portfolio} />
             </Button>
         </div>

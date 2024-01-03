@@ -129,10 +129,13 @@ export const projectList = [
         part: "1인 프로젝트",
         func : ["포트폴리오 내용 표시"],
         stack: ["Next.js", "React", "Javascript", "Styled-Components", "Tailwind", "Vercel"],
-        dev: ["Next.js SPA", "Toggle을 통한 내용 숨김" , "Side Popup을 통한 내용 표시"],
-        cap: "Muse는 메트로폴리탄 박물관 Open API를 사용하여 박물관 전시물들을 확인할 수 있는 웹입니다. ",
-        troubles: [""],
-        solutions: [""],
+        dev: ["Next.js SPA", "Styled-Components를 활용한 Notion 블록 컴포넌트 생성", "Toggle을 통한 내용 숨김" , "Side Popup을 통한 내용 표시"],
+        cap: "Notion의 심플한 블록 단위 프레임에 버튼/팝업/자유로운 텍스트 필드 등을 추가하여, 보다 자유롭고 명확하게 정보 전달을 할 수 있도록 구현한 웹페이지입니다.",
+        troubles: ["side popup의 fixed와 overflow", "Day & Night Theme 변경 기능"],
+        solutions: [
+          "메인 화면과 별개로 side popup을 고정시키되, popup 내에서는 스크롤이 가능하도록 구현해야 했음. 이에 popup에 fixed 속성을 주고, overflow-y를 활성화하였음. 이를 통해 메인 화면과 side popup이 별개의 스크롤 영역을 가지도록 함.",
+          "Day & Night Theme을 변경할 수 있는 기능을 구현하고자 함. 이에 Styled-Component에 isDay라는 props를 전달하여, isDay에 따라 배경색상과 폰트색상을 동적 적용하도록 구현함."
+        ],
         image: 2,
         url: 'https://muse-xi.vercel.app/',
         github: 'https://github.com/sjhong98/Portfolio_notion',

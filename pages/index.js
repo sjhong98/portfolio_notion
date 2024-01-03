@@ -1,5 +1,5 @@
 import propic from '../public/propic2.jpg';
-import { F1, F2, F3, F4, Container, Content, Space, F3_2 } from '@/styles/styled-components';
+import { F1, F2, F3, F4, Container, Content, Space } from '@/styles/styled-components';
 import HeaderComponent from '@/components/header';
 import Image from 'next/image';
 import Intro from '@/components/intro';
@@ -90,7 +90,7 @@ export default function Home() {
       <Content poped={poped}>
         <F1>홍승재의 이력서 | 포트폴리오</F1>
         <div className='flex flex-row mt-12'>
-          <Image src={propic} className='w-1/4 h-1/4'/>
+          <Image src={propic} className='sm:w-1/4 w-1/3 h-1/4 sm:mr-0 mr-3 sm:mt-0 mt-2'/>
           <Intro fontColor={fontColor} x/>
         </div>
         <Space />
@@ -100,6 +100,7 @@ export default function Home() {
           <F3>2018.03 | 상명대학교 입학</F3>
           <F3>2021.03 | 육군 병장 만기전역</F3>
           <F3>2024.02 | 컴퓨터과학과, 역사콘텐츠전공 복수전공 졸업예정</F3>
+          <F3>                   컴퓨터과학과 전공학점 3.88</F3>
         </div>
         <Space />
         <div>
@@ -109,7 +110,7 @@ export default function Home() {
           </div>
           {
             toggle1Open ?
-            <div className='grid grid-cols-2 gap-6'>
+            <div className='grid sm:grid-cols-2 grid-cold-1 gap-6'>
               {  projects.map((item, index) => {
                 return (
                   <div key={index} onClick={() => {changeIndex(index)}}>

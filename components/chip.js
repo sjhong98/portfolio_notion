@@ -1,4 +1,4 @@
-import { F3, F4 } from "@/styles/styled-components";
+import { F3 } from "@/styles/styled-components";
 import styled from "styled-components";
 import Image from "next/image";
 

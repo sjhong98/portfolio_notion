@@ -1,5 +1,4 @@
-import { F1, F2, F3, F3_2, F4, F5 } from "@/styles/styled-components";
-import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import { F2, F3, F3_2, F4 } from "@/styles/styled-components";
 import { useEffect, useState } from "react";
 
 
