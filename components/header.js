@@ -27,8 +27,8 @@ export default function HeaderComponent(props) {
     const handleLinkClick = () => {
         linkRef.current.classList.add('routing');
         setTimeout(() => {
+            linkRef.current.classList.remove('routing');
             router.push('https://hongseungjae.info/');
-            // linkRef.current.classList.remove('routing');
         }, 1500);
     }
 
