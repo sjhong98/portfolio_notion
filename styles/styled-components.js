@@ -113,12 +113,12 @@ export const F3_2 = styled(Font)`
 
 export const F4 = styled(Font)`
     @media (max-width: 800px) {
-        font-size: 1rem;
+        font-size: 0.6rem;
         white-space: pre-wrap;
         line-height: 2.7vh;
     }
     @media (min-width: 801px) {
-        font-size: 0.6rem;
+        font-size: 1rem;
         white-space: pre-wrap;
         line-height: 2.7vh;
     }
@@ -187,7 +187,7 @@ export const Content = styled.div`
         min-height: 100vh;
         height: auto;
         padding-left: 10vw;
-        /* padding-right: 10vw; */
+        padding-right: 10vw;
         margin-top: 10vh;
         margin-left: ${({ poped }) => (poped ? '0vw' : '20vw')};
         margin-right: ${({ poped }) => (poped ? '40vw' : '20vw')};
@@ -270,11 +270,11 @@ const Pop = styled.div`
 
 export const PopUp = styled(Pop)`
     @media (max-width: 800px) {
-        animation: ${popedDownAnim} 0.3s ease forwards;
+        animation: ${popedDownAnimM} 0.3s ease forwards;
         right: -40vw;
     }
     @media (min-width: 801px) {
-        animation: ${popedDownAnimM} 0.3s ease forwards;
+        animation: ${popedDownAnim} 0.3s ease forwards;
         right: -40vw;
     }
     background-color: ${props => props.bgColor};
@@ -282,11 +282,11 @@ export const PopUp = styled(Pop)`
 
 export const PopDown = styled(Pop)`
     @media (max-width: 800px) {
-        animation: ${popedUpAnim} 0.3s ease forwards;
+        animation: ${popedUpAnimM} 0.3s ease forwards;
         right: 0vw;
     }
     @media (min-width: 801px) {
-        animation: ${popedUpAnimM} 0.3s ease forwards;
+        animation: ${popedUpAnim} 0.3s ease forwards;
         right: 0vw;
     }
     background-color: ${props => props.bgColor};
