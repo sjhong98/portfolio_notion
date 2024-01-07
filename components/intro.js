@@ -13,7 +13,7 @@ export default function Intro(props) {
         <div className='flex flex-col sm:ml-32 ml-0 mt-3'>
             <div className="flex flex-row">
                 <AccessibilityIcon className={props.fontColor==="black" ? day : night} />
-                <F3>남, 1998.09.01 (25세)</F3>
+                <F3>남, 1998.09.01 (만 25세)</F3>
             </div>
             <div className="flex flex-row">
                 <PhoneIcon className={props.fontColor==="black" ? day : night} />
