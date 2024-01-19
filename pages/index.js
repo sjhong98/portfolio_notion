@@ -4,12 +4,12 @@ import HeaderComponent from '@/components/header';
 import Image from 'next/image';
 import Intro from '@/components/intro';
 import { useEffect, useRef, useState } from 'react';
-import { projectList, interesting, green, yellow } from '@/components/projectList';
+import { projectList, interesting } from '@/components/projectList';
+import { stacks } from '@/components/stacks';
 import Project from '@/components/projects';
 import Pop from '@/components/Pop';
 import SelfIntro from '@/components/self-intro';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import Chip from '@/components/chip';
 import QnA from '@/components/qna';
 
 export default function Home() {
@@ -158,20 +158,14 @@ export default function Home() {
             <F2>Stacks</F2>
           </div>
           { toggle3Open ?
-            <div className='flex flex-row'>
-              <div className='w-1/2 flex flex-col items-center'>
-                <F4>여러 번 사용해보았고, 익숙하게 사용할 수 있습니다.</F4>
-                { green.map((item, index) => {
+            <div className='flex flex-row justify-center'>
+              <div className='grid grid-cols-4 gap-5 w-[80%] min-h-[10vh]'>
+                { stacks.map((item, index) => {
                   return (
-                    <Chip key={index} title={item} />
-                  )
-                })}
-              </div>
-              <div className='w-1/2 flex flex-col items-center'>
-                <F4>직접 사용해보았으나, 능숙하진 않습니다.</F4>
-                { yellow.map((item, index) => {
-                  return (
-                    <Chip key={index} title={item} />
+                    <div className='rounded-xl bg-gray-200 w-[6vw] h-[6vw] flex flex-col justify-center items-center p-4'>
+                      <Image src={`/${item}.png`} width={70} height={70} />
+                      <p className='text-black text-sm'>{item}</p>
+                    </div>
                   )
                 })
 

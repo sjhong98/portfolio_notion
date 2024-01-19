@@ -1,0 +1,2 @@
+
+export const stacks = ['Typescript', 'Javascript', 'React', 'Next.js', 'Redux', 'Redux-Toolkit', 'Recoil', 'Zustand', 'CSS', 'Tailwind', 'Styled-Components', 'GSAP', 'Webpack', 'socket.io', 'Cypress', 'React Native', 'Vercel', 'Firebase', 'Route 53', 'Github Actions', 'Github', 'Notion'];

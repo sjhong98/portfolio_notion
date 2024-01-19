@@ -160,5 +160,5 @@ export const green = [
 ];
 
 export const yellow = [
-  'Webpack', 'Socket.io', 'Cypress', 'Github Actions', 'Route 53', 'React Native'
+  'Webpack', 'socket.io', 'Cypress', 'Github Actions', 'Route 53', 'React Native'
 ];
