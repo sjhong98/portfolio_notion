@@ -162,7 +162,7 @@ export default function Home() {
               <div className='grid grid-cols-4 gap-5 w-[80%] min-h-[10vh]'>
                 { stacks.map((item, index) => {
                   return (
-                    <div className='rounded-xl bg-gray-200 w-[6vw] h-[6vw] flex flex-col justify-center items-center p-4'>
+                    <div key={index} className='rounded-xl bg-gray-200 w-[6vw] h-[6vw] flex flex-col justify-center items-center p-4'>
                       <Image src={`/${item}.png`} width={70} height={70} />
                       <p className='text-black text-sm'>{item}</p>
                     </div>
