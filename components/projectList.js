@@ -115,11 +115,11 @@ export const projectList = [
         stack: ["Next.js", "React", "Typescript", "Styled-Components", "Tailwind", "Vercel"],
         dev: ["Next.js SPA", "getServerSideProps를 이용한 SSR", "useRef를 이용한 모달 구현", "scrollY와 eventListener를 이용한 헤더접힘 구현", "IntersectionObserver를 이용한 무한스크롤 구현", "styled-components를 통한 컴포넌트 구현", "tailwind CSS"],
         cap: "Muse는 메트로폴리탄 박물관 Open API를 사용하여 박물관 전시물들을 확인할 수 있는 웹입니다. ",
-        troubles: ['MUI 컴포넌트와 SSR 방식이 호환되지 않는 문제', '함수 클로저로 인한 변경된 데이터의 미적용', 'props가 복잡해짐에 따라 interface 구현'],
+        troubles: ['MUI 컴포넌트와 SSR 방식이 호환되지 않는 문제', '함수 클로저로 인한 변경된 데이터의 미적용', '이미지 로딩 시간 느림'],
         solutions: [
             'Mui modal을 사용하여 특정 전시물의 정보를 확인할 수 있도록 구현하고자 함. 이 때 server 측에서 렌더링된 페이지가 동작되고 있을 동안에는 modal이 제대로 동작했으나, 이후 client 측에서 리렌더링된 페이지가 동작하기 시작하자 mui modal의 backdrop이 제대로 동작하지 않음. 이에 원인을 찾아보았으나, 아직 Mui 컴포넌트와 Next.js의 SSR 방식이 호환되지 않는 경우가 있다는 내용을 확인하고, 직접 modal을 구현하기로 함.', 
             '전시물 카테고리의 변경을 구현하기 위해 index 값이 바뀔 경우, 새로운 데이터를 받아오도록 구현하였으나, index 값이 변하였음에도 초기 index값의 데이터만 받아오는 문제 발생. 이벤트 핸들러에 콜백 함수를 등록하여, 이벤트 핸들러 동작시에 콜백 함수가 실행되도록 하였는데, 이벤트 핸들러가 동작할 시점에 콜백 함수는 이미 소멸한 상태로, 외부 변수인 index의 클로저만 남아있는 상태가 되었던 것임. 이에 index 값이 변할 경우에 콜백 함수를 새로 생성하고 이벤트 핸들러에 재등록하여, 제대로 index가 반영될 수 있도록 함.', 
-            'typescript에서 컴포넌트 간 전달되는 데이터의 type이 복잡해짐에 따라 데이터 타입의 interface를 구현하고, 이를 이용하여 props를 전달.'
+            'next/image와 sharp를 사용하여 이미지 최적화'
         ],
         image: 1,
         url: 'https://muse-xi.vercel.app/',
