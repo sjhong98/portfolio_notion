@@ -52,10 +52,9 @@ export const projectList = [
         stack: ["HTML", "CSS", "Javascript", "React", "Redux", "React Native", "Firebase", "Github Actions"],
         dev: ["React SPA", "서버와의 API 통신 (axios)", "로딩 중 UI 구현", "QR코드 스캐너 (react-native-qrcode-scanner 사용)"],
         cap: "DMRS(DID Medical Record System)은 블록체인 기반 신원정보 체계인 DID를 활용하여 환자가 원하는 범위 내에서 자신의 진료정보를 의사에게 제공할 수 있으며, 의사는 이 정보를 바탕으로 진료기록을 조회하고 작성할 수 있습니다. ",
-        troubles: ['복잡한 로직으로 인한 API 명세서의 필요성', 'Git repository 분할의 필요성'],
+        troubles: ['복잡한 로직으로 인한 API 명세서의 필요성'],
         solutions: [
-            `블록체인 및 JWT 암복호화, 모바일-웹 간 통신 등 여러 로직들이 구현되어야 했던 프로젝트인만큼, 전체적인 데이터의 흐름과 로직을 파악하는 것에 어려움을 느꼈음. 이에 각 API 별 목적과 데이터 타입 등 구체적인 내용을 담은 API 명세서를 작성하여 이를 기반으로 백엔드 팀원과 원활히 소통함으로써, 정확한 구현 및 개발속도 향상 등을 경험하였고 API 명세서의 필요성을 느낌.`, 
-            '초기에 client의 web/app 및 server까지 전부 통일된 repository를 사용하다가 계속해서 버전 충돌, 원인 모를 풀 에러 등이 발생하여, 이를 해결하거나 새로운 repository를 만드는데에 불필요한 시간이 소모되었음. 이에 repository를 web/app/server 별로 분할하여 각자의 영역만 관리함으로써 불필요한 시간 소모를 방지할 수 있었음.'
+            `여러 기기를 통해 데이터가 전달되도록 하기 위해 복잡한 구조로 구현되어야 했던 프로젝트인만큼, 전체적인 데이터의 흐름과 로직을 파악하는 것에 어려움을 느꼈음. 이에 각 API 별 목적과 데이터 타입 등 구체적인 내용을 담은 API 명세서를 작성하여 이를 기반으로 백엔드 팀원과 원활히 소통함으로써, 정확한 구현 및 개발속도 향상 등을 경험하였고 API 명세서의 필요성을 느낌.`, 
         ],
         image: 2,
         notion: 'https://noble-walker-465.notion.site/DMRS-5933966e79ef4b88a899260b1de5a8bf?pvs=4',
