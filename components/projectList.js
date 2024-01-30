@@ -28,7 +28,7 @@ export const projectList = [
         part: "팀 프로젝트, 프론트엔드 개발 전체 담당",
         func : ["카카오 소셜로그인", "공공데이터를 기반으로 블록 생성", "드래그앤드롭 블록 쌓기", "카카오맵 상에서 일정별 여행 동선 확인", "일정 및 수정 실시간 반영", "그룹 채팅"],
         stack: ["HTML", "CSS", "Javascript", "React", "Redux", "Webpack", "Socket.io", "Firebase"],
-        dev: ["Redux를 사용한 상태관리", "MUI를 활용한 컴포넌트", "드래그앤드롭 (react-beutiful-dnd)", "공공데이터 / 서버와의 API 통신 (axios)", "room 기반 socket.io 통신", "CSS Keyframe 이용한 에니메이션", "데스크탑 및 모바일 대응 반응형 웹 구현 (MediaQuery)"],
+        dev: ["Redux를 사용한 상태관리", "MUI를 활용한 컴포넌트", "드래그앤드롭 (react-beautiful-dnd)", "공공데이터 / 서버와의 API 통신 (axios)", "room 기반 socket.io 통신", "CSS Keyframe 이용한 에니메이션", "데스크탑 및 모바일 대응 반응형 웹 구현 (MediaQuery)"],
         troubles: ['드래그앤드롭 구현 ', '드래그앤드롭 발생 시 여러 사용자에게서 동시에 동일한 동작이 발생하도록 구현해야 하는 문제', '카드가 없는 column은 드래그앤드롭이 동작하지 않는 문제.', '에니메이션을 통한 화면 전환 효과'],
         solutions: [
             '각 column 별로 array를 생성하였고, 드래그앤드롭 발생 시에는 splice() 메소드를 사용하여 각 원소를 자르고 끼워넣음으로써 카드 이동을 구현하였음. 또한 같은 column에서의 이동 / 다른 column간의 이동을 구분하여 구현하였고, 공공데이터를 받아오는 부분인 column1으로부터 카드를 가져오거나 column1에 카드를 놓는 경우에는 카드의 생성과 제거와 같이 별도의 이벤트로서 처리함.',
@@ -44,7 +44,7 @@ export const projectList = [
       },
       {
         title: "DMRS",
-        subtitle: "블록체인 기반 진료기록 관리 시스템",
+        subtitle: "진료기록 관리 시스템",
         main: "#React  #ReactNative  #API명세서",
         duration: "2023.07-11",
         part: "팀 프로젝트, 프론트엔드 개발 전체 담당",
