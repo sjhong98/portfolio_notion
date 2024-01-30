@@ -50,7 +50,7 @@ export const projectList = [
         part: "팀 프로젝트, 프론트엔드 개발 전체 담당",
         func : ["카카오 소셜로그인", "진료기록 관리", "앱)QR코드로 진료기록 제공", "앱)QR코드 스캐너로 진료기록 접근"],
         stack: ["HTML", "CSS", "Javascript", "React", "Redux", "React Native", "Firebase", "Github Actions"],
-        dev: ["React SPA", "서버와의 API 통신 (axios)", "로딩 중 UI 구현", "QR코드 스캐너 (react-native-qrcode-scanner 사용)", "Github Actions CI/CD"],
+        dev: ["React SPA", "서버와의 API 통신 (axios)", "로딩 중 UI 구현", "QR코드 스캐너 (react-native-qrcode-scanner 사용)"],
         cap: "DMRS(DID Medical Record System)은 블록체인 기반 신원정보 체계인 DID를 활용하여 환자가 원하는 범위 내에서 자신의 진료정보를 의사에게 제공할 수 있으며, 의사는 이 정보를 바탕으로 진료기록을 조회하고 작성할 수 있습니다. ",
         troubles: ['복잡한 로직으로 인한 API 명세서의 필요성', 'Git repository 분할의 필요성'],
         solutions: [
