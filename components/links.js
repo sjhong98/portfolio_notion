@@ -36,9 +36,9 @@ export default function Links(props) {
             <Button className='rounded-xl sm:ml-6 ml-2' style={{transform:'rotate(-23deg)'}} onClick={handleLinkClick}>
                 <Image src={portfolio} />
             </Button>
-            <Button className='rounded-xl sm:ml-6 ml-2' onClick={() => router?.push('https://www.instagram.com/hong_seung_jae_/')}>
+            {/* <Button className='rounded-xl sm:ml-6 ml-2' onClick={() => router?.push('https://www.instagram.com/hong_seung_jae_/')}>
                 <Image src={insta} />
-            </Button>
+            </Button> */}
             <div ref={linkRef} className="rounded-full w-1 h-1 opacity-0" style={{backgroundColor:'#FEE832', zIndex:9999}} />
         </div>
     )

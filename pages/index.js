@@ -114,6 +114,7 @@ export default function Home() {
 
   return (
     <Container fontColor={fontColor} bgColor={bgColor} >
+      <title>홍승재의 이력서 | 포트폴리오</title>
       <HeaderComponent changeFontColor={changeFontColor} changeBgColor={changeBgColor} />
       <Content ref={contentRef} poped={poped}>
         <F1>홍승재의 이력서 | 포트폴리오</F1>
